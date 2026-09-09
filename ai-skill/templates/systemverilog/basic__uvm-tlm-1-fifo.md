@@ -5,7 +5,6 @@ triggers: ["fifo"]
 description: "UVM TLM-1 FIFO"
 category: systemverilog
 ultisnips_flags: "b"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "ANALYSIS"

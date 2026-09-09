@@ -5,7 +5,6 @@ triggers: ["imp"]
 description: "UVM TLM-1 Implementation"
 category: systemverilog
 ultisnips_flags: "b"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "TAB_1"

@@ -5,7 +5,6 @@ triggers: ["Txn", "Transaction"]
 description: "UVM Transaction"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.1.6"
 author: "TBD9rain"
 placeholders:
   - name: "TXN"

@@ -5,7 +5,6 @@ triggers: ["field"]
 description: "Static Array/Dynamic Array/Queue Field Automation Registry"
 category: systemverilog
 ultisnips_flags: "b"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "TAB_1"

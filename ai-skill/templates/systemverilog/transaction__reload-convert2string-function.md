@@ -5,7 +5,6 @@ triggers: ["do_"]
 description: "Reload convert2string() function"
 category: systemverilog
 ultisnips_flags: "Abr"
-version: "1.1.6"
 author: "TBD9rain"
 placeholders: []
 ---

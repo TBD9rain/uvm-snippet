@@ -5,7 +5,6 @@ triggers: ["bind"]
 description: "bind construct"
 category: systemverilog
 ultisnips_flags: "rbA"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "TARGET_INST_HIER_PATH"

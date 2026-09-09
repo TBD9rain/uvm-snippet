@@ -5,7 +5,6 @@ triggers: ["cross"]
 description: "cross coverage definition"
 category: systemverilog
 ultisnips_flags: "bw"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "LABEL"

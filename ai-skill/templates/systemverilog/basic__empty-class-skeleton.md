@@ -5,7 +5,6 @@ triggers: ["class"]
 description: "empty class skeleton"
 category: systemverilog
 ultisnips_flags: "bw"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "CLS_NAME"

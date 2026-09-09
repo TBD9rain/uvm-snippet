@@ -5,7 +5,6 @@ triggers: ["Seq(uence)?"]
 description: "UVM Sequence"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.3.0"
 author: "TBD9rain"
 placeholders:
   - name: "SEQUENCE"

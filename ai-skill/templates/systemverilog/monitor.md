@@ -5,7 +5,6 @@ triggers: ["Mon(itor)?"]
 description: "UVM Monitor"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.2.0"
 author: "TBD9rain"
 placeholders:
   - name: "MONITOR"

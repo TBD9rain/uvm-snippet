@@ -5,7 +5,6 @@ triggers: ["Cfg", "Config"]
 description: "UVM Configuration Object"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.0.0"
 author: "TBD9rain"
 placeholders:
   - name: "CONFIG"

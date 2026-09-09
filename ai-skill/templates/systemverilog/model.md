@@ -5,7 +5,6 @@ triggers: ["Mdl", "RefMdl", "Model", "ReferenceModel"]
 description: "UVM Reference Model"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "MODEL"

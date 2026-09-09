@@ -5,7 +5,6 @@ triggers: ["assert "]
 description: "instant assert"
 category: systemverilog
 ultisnips_flags: "rbA"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "TAB_1"

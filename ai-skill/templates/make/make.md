@@ -5,7 +5,6 @@ triggers: ["makefile"]
 description: "Makefile for Questa Sim 2026.2 Verification on Windows"
 category: make
 ultisnips_flags: "b"
-version: "1.0.3"
 author: "TBD9rain"
 placeholders:
   - name: "TB_NAME"

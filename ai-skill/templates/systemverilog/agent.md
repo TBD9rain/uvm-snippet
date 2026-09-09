@@ -5,7 +5,6 @@ triggers: ["Agent", "Agt"]
 description: "UVM Agent"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "AGENT"

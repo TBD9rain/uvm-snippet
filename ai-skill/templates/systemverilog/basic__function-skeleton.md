@@ -5,7 +5,6 @@ triggers: ["function"]
 description: "function skeleton"
 category: systemverilog
 ultisnips_flags: "A"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "AUTOMATIC"

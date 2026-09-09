@@ -5,7 +5,6 @@ triggers: ["=\\s+create"]
 description: "Factory Create"
 category: systemverilog
 ultisnips_flags: "rA"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "CLASS"
