@@ -5,7 +5,6 @@ triggers: ["Cov(Col|erageCollector)?"]
 description: "UVM Coverage Collector"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.0.5"
 author: "TBD9rain"
 placeholders:
   - name: "COVERAGECOLLECTOR"

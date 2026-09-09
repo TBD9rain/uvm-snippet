@@ -5,7 +5,6 @@ triggers: ["Test"]
 description: "UVM Test to Verify Scoreboard"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.3.0"
 author: "TBD9rain"
 placeholders:
   - name: "TEST"

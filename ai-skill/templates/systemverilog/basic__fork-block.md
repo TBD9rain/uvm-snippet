@@ -5,7 +5,6 @@ triggers: ["fork "]
 description: "fork block"
 category: systemverilog
 ultisnips_flags: "rbA"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "TAB_1"

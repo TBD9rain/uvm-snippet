@@ -37,7 +37,6 @@ triggers: ["Agent", "Agt"]
 description: "UVM Agent"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "AGENT"
@@ -71,7 +70,7 @@ literal tabs GNU make requires.
 | `description` | human description carried over from the snippet |
 | `category` | `systemverilog` \| `tcl` \| `make` |
 | `ultisnips_flags` | original UltiSnips option letters, kept for traceability |
-| `version`, `author` | copied from the source file header, when present |
+| `author` | copied from the source file header, when present |
 | `placeholders` | ordered list of every customisation point (see below) |
 
 ## Placeholder syntax

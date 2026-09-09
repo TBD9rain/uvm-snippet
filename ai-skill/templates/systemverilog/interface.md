@@ -5,7 +5,6 @@ triggers: ["interface"]
 description: "interface definition"
 category: systemverilog
 ultisnips_flags: "bw"
-version: "1.1.3"
 author: "TBD9rain"
 placeholders:
   - name: "IF_NAME"

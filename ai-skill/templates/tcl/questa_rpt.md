@@ -5,7 +5,6 @@ triggers: ["report"]
 description: "QuestaSim UVM Report Script"
 category: tcl
 ultisnips_flags: "Ab"
-version: "1.0.0"
 author: "TBD9rain"
 placeholders: []
 ---

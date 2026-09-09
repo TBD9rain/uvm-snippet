@@ -5,7 +5,6 @@ triggers: ["Scb", "Scoreboard"]
 description: "UVM Scoreboard"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.3.1"
 author: "TBD9rain"
 placeholders:
   - name: "SCOREBOARD"

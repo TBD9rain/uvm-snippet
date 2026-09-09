@@ -5,7 +5,6 @@ triggers: ["FaultInjector", "FI"]
 description: "Fault Injector"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.0.0"
 author: "TBD9rain"
 placeholders:
   - name: "FAULTINJECTOR"

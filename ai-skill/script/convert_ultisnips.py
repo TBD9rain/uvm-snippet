@@ -296,23 +296,20 @@ def parse_triggers(raw: str, flags: str):
 
 
 def read_header(lines):
-    version = author = None
+    author = None
     for line in lines:
         if line.startswith("snippet "):
             break
-        m = re.match(r"#\s*Version\s*:\s*(.+?)\s*$", line)
-        if m:
-            version = m.group(1)
         m = re.match(r"#\s*Author\s*:\s*(.+?)\s*$", line)
         if m:
             author = m.group(1)
-    return version, author
+    return author
 
 
 def parse_file(path: Path):
     """Yield one dict per snippet block found in ``path``."""
     lines = path.read_text(encoding="utf-8").splitlines()
-    version, author = read_header(lines)
+    author = read_header(lines)
 
     i, n = 0, len(lines)
     while i < n:
@@ -338,7 +335,6 @@ def parse_file(path: Path):
             "description": description,
             "flags": flags,
             "body": "\n".join(body_lines),
-            "version": version,
             "author": author,
         }
 
@@ -392,8 +388,6 @@ def render_frontmatter(meta, placeholders):
     lines.append(f"description: {json.dumps(meta['description'])}")
     lines.append(f"category: {meta['category']}")
     lines.append(f"ultisnips_flags: {json.dumps(meta['flags'])}")
-    if meta.get("version"):
-        lines.append(f"version: {json.dumps(meta['version'])}")
     if meta.get("author"):
         lines.append(f"author: {json.dumps(meta['author'])}")
     if placeholders:
@@ -478,7 +472,6 @@ def main() -> int:
                 "description": block["description"],
                 "category": category,
                 "flags": block["flags"],
-                "version": block["version"],
                 "author": block["author"],
             }
             frontmatter = render_frontmatter(meta, placeholders)

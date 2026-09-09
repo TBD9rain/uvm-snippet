@@ -5,7 +5,6 @@ triggers: ["testbench"]
 description: "UVM testbench"
 category: systemverilog
 ultisnips_flags: "b"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "DUT"

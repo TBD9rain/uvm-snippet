@@ -5,7 +5,6 @@ triggers: ["config"]
 description: "UVM Config Get"
 category: systemverilog
 ultisnips_flags: "w"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "INT"

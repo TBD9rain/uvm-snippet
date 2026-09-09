@@ -5,7 +5,6 @@ triggers: ["Sqr", "Sequencer"]
 description: "UVM Sequencer"
 category: systemverilog
 ultisnips_flags: "rb"
-version: "1.1.3"
 author: "TBD9rain"
 placeholders:
   - name: "SEQUENCER"

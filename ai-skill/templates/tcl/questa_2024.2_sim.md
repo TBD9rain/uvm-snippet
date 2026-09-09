@@ -5,7 +5,6 @@ triggers: ["simulate"]
 description: "QuestaSim 2024.2.1 UVM simulation script"
 category: tcl
 ultisnips_flags: "ab"
-version: "1.0.0"
 author: "TBD9rain"
 placeholders:
   - name: "TAB_2"

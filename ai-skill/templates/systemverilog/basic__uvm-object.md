@@ -5,7 +5,6 @@ triggers: ["class"]
 description: "UVM Object"
 category: systemverilog
 ultisnips_flags: "b"
-version: "1.1.0"
 author: "TBD9rain"
 placeholders:
   - name: "OBJECT"
