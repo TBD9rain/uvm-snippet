@@ -70,10 +70,10 @@ uvm-snippet/
 | ---------------------- | ---------------------------------- | -------- |
 | `basic.snippets`       | `class`, `port`, `imp`, `config`, `field`, `msg`, `function`, `covergroup`, `bind`, … | UVM class/object skeletons, TLM-1 communication, `uvm_config_db`, factory create, field-automation macros, message macros, and general SystemVerilog constructs |
 | `interface.snippets`   | `interface`                        | Interface with clocking block and driver/monitor/DUT modports |
-| `package.snippets`     | `package` / `pkg`                  | UVM component package with ordered component includes |
+| `package.snippets`     | `package` / `pkg`                  | UVM component package with ordered component includes and the sequencer specialization |
 | `transaction.snippets` | `Txn` / `Transaction`, `do_`       | Transaction item plus `do_copy`/`do_compare`/`convert2string`/`do_print` reloads |
 | `sequence.snippets`    | `Seq` / `Sequence`                 | UVM sequence and virtual sequence |
-| `sequencer.snippets`   | `Sqr` / `Sequencer`                | UVM sequencer and virtual sequencer |
+| `sequencer.snippets`   | `Sqr` / `Sequencer`                | Sequencer as an extended class or as a type specialization (typedef), plus a virtual sequencer |
 | `driver.snippets`      | `Drv` / `Driver`                   | UVM driver |
 | `monitor.snippets`     | `Mon` / `Monitor`                  | UVM monitor |
 | `agent.snippets`       | `Agt` / `Agent`                    | UVM agent |
@@ -104,7 +104,7 @@ so a generated package wires the pieces together out of the box:
 | ---------- | -------------------- |
 | `Config`   | Configuration object |
 | `Txn`      | Transaction          |
-| `Sqr`      | Sequencer            |
+| `Sqr`      | Sequencer (extended class in its own file, or a typedef in the package) |
 | `Drv`      | Driver               |
 | `Mon`      | Monitor              |
 | `Agt`      | Agent                |
