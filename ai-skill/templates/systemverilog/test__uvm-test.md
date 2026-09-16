@@ -79,7 +79,7 @@ class {{TEST}} extends uvm_test;
 
         //  control sequence start
         seq = {{SEQUENCE}}{{PARAMS_10}}::type_id::create("seq");
-        seq.start(env.i_agt.sqr);
+        seq.start(env.iagt.sqr);
 
         //  delay before drop objection
         phase.phase_done.set_drain_time(this, 1000ns);

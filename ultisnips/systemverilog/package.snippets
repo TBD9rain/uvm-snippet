@@ -22,7 +22,11 @@ $0
 \`include "Config.sv"
 
 \`include "Txn.sv"
-\`include "Sqr.sv"
+
+//  sequencer type specialization; no derived class and no separate file.
+//  Replace it with \`include "Sqr.sv" when the sequencer is an extended class.
+typedef uvm_sequencer #(.REQ (${2:Txn})) ${3:Sqr};
+
 \`include "Drv.sv"
 \`include "Mon.sv"
 \`include "Agt.sv"

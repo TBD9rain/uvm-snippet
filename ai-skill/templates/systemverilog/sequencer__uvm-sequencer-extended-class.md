@@ -1,8 +1,8 @@
 ---
-id: "sequencer__uvm-sequencer"
+id: "sequencer__uvm-sequencer-extended-class"
 source_file: "systemverilog/sequencer.snippets"
 triggers: ["Sqr", "Sequencer"]
-description: "UVM Sequencer"
+description: "UVM Sequencer Extended Class"
 category: systemverilog
 ultisnips_flags: "rb"
 author: "TBD9rain"

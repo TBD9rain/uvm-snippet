@@ -53,7 +53,7 @@ class ${1:Test} extends uvm_test;
 
 		//  control sequence start
 		seq = $9$10::type_id::create("seq");
-		seq.start(env.i_agt.sqr);
+		seq.start(env.iagt.sqr);
 
 		//  delay before drop objection
 		phase.phase_done.set_drain_time(this, 1000ns);
@@ -111,7 +111,7 @@ class ${1:Test} extends ${2:BaseTest};
 
 		//  control sequence start
 		seq = $3$4::type_id::create("seq");
-		seq.start(env.i_agt.sqr);
+		seq.start(env.iagt.sqr);
 
 		//  delay before drop objection
 		phase.phase_done.set_drain_time(this, 1000ns);

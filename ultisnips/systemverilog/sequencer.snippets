@@ -13,7 +13,7 @@
 #
 #===================================================================================================
 
-snippet "Sqr|Sequencer" "UVM Sequencer" rb
+snippet "Sqr|Sequencer" "UVM Sequencer Extended Class" rb
 class ${1:Sequencer}${2: #(
 	$3
 )} extends uvm_sequencer #(.REQ (${4:Txn}));
@@ -24,6 +24,10 @@ class ${1:Sequencer}${2: #(
 		super.new(name, parent);
 	endfunction
 endclass
+endsnippet
+
+snippet "Sqr|Sequencer" "UVM Sequencer Type Specialization" rb
+typedef uvm_sequencer #(.REQ (${1:Txn}${2: #($3)})) ${4:Sequencer};
 endsnippet
 
 snippet "Sqr|Sequencer" "UVM Virtual Sequencer" rb

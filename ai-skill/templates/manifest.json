@@ -786,7 +786,9 @@
     "description": "UVM Component Package Definition",
     "category": "systemverilog",
     "placeholders": [
-      "PKG_NAME"
+      "PKG_NAME",
+      "TXN",
+      "SQR"
     ]
   },
   {
@@ -877,13 +879,13 @@
     ]
   },
   {
-    "id": "sequencer__uvm-sequencer",
-    "file": "systemverilog/sequencer__uvm-sequencer.md",
+    "id": "sequencer__uvm-sequencer-extended-class",
+    "file": "systemverilog/sequencer__uvm-sequencer-extended-class.md",
     "triggers": [
       "Sqr",
       "Sequencer"
     ],
-    "description": "UVM Sequencer",
+    "description": "UVM Sequencer Extended Class",
     "category": "systemverilog",
     "placeholders": [
       "SEQUENCER",
@@ -893,6 +895,22 @@
       "PARAMS_5",
       "TAB_6",
       "PARAM_SUFFIX"
+    ]
+  },
+  {
+    "id": "sequencer__uvm-sequencer-type-specialization",
+    "file": "systemverilog/sequencer__uvm-sequencer-type-specialization.md",
+    "triggers": [
+      "Sqr",
+      "Sequencer"
+    ],
+    "description": "UVM Sequencer Type Specialization",
+    "category": "systemverilog",
+    "placeholders": [
+      "TXN",
+      "PARAMS_2",
+      "TAB_3",
+      "SEQUENCER"
     ]
   },
   {
