@@ -111,8 +111,8 @@ class {{ENVIRONMENT}}{{PARAMS_2}} extends uvm_env;
 
     {{CONFIG}}{{PARAMS_13}} {{CFG}};
 
-    {{INAGT}}{{PARAMS_17}} i_agt;
-    {{OUTAGT}}{{PARAMS_20}} o_agt;
+    {{INAGT}}{{PARAMS_17}} iagt;
+    {{OUTAGT}}{{PARAMS_20}} oagt;
     {{COV}}{{PARAMS_23}} cov;
     {{MDL}}{{PARAMS_26}} mdl;
     {{SCB}}{{PARAMS_29}} scb;
@@ -144,16 +144,16 @@ class {{ENVIRONMENT}}{{PARAMS_2}} extends uvm_env;
         cov_en = {{CFG}}.cov_en;
         ref_latency = {{CFG}}.ref_latency;
 
-        i_agt = {{INAGT}}{{PARAMS_17}}::type_id::create("i_agt", this);
-        uvm_config_db #({{CONFIG}}{{PARAMS_13}})::set(this, "i_agt", "{{CFG}}", {{CFG}});
+        iagt = {{INAGT}}{{PARAMS_17}}::type_id::create("iagt", this);
+        uvm_config_db #({{CONFIG}}{{PARAMS_13}})::set(this, "iagt", "{{CFG}}", {{CFG}});
 
         if (cov_en) begin
             cov = {{COV}}{{PARAMS_23}}::type_id::create("cov", this);
             cov_sti_fifo = new("cov_sti_fifo", this);
         end
 
-        o_agt = {{OUTAGT}}{{PARAMS_20}}::type_id::create("o_agt", this);
-        uvm_config_db #({{CONFIG}}{{PARAMS_13}})::set(this, "o_agt", "{{CFG}}", {{CFG}});
+        oagt = {{OUTAGT}}{{PARAMS_20}}::type_id::create("oagt", this);
+        uvm_config_db #({{CONFIG}}{{PARAMS_13}})::set(this, "oagt", "{{CFG}}", {{CFG}});
 
         if (!scb_en) begin
             return;
@@ -178,7 +178,7 @@ class {{ENVIRONMENT}}{{PARAMS_2}} extends uvm_env;
         super.connect_phase(phase);
 
         if (cov_en) begin
-            i_agt.ap.connect(cov_sti_fifo.analysis_export);
+            iagt.ap.connect(cov_sti_fifo.analysis_export);
             cov.imon_getp.connect(cov_sti_fifo.blocking_get_export);
         end
 
@@ -186,18 +186,18 @@ class {{ENVIRONMENT}}{{PARAMS_2}} extends uvm_env;
             return;
         end
 
-        i_agt.ap.connect(mdl_sti_fifo.analysis_export);
+        iagt.ap.connect(mdl_sti_fifo.analysis_export);
         mdl.imon_getp.connect(mdl_sti_fifo.blocking_get_export);
 
-        i_agt.ap.connect(scb_sti_fifo.analysis_export);
+        iagt.ap.connect(scb_sti_fifo.analysis_export);
         scb.imon_getp.connect(scb_sti_fifo.nonblocking_get_export);
 
         if (fault_inject_en) begin
-            o_agt.ap.connect(fi.imp);
+            oagt.ap.connect(fi.imp);
             fi.ap.connect(scb_obs_fifo.analysis_export);
         end
         else begin
-            o_agt.ap.connect(scb_obs_fifo.analysis_export);
+            oagt.ap.connect(scb_obs_fifo.analysis_export);
         end
         scb.omon_getp.connect(scb_obs_fifo.blocking_get_export);
 

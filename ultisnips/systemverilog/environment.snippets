@@ -26,8 +26,8 @@ class ${1:Environment}${2: #(
 
 	${12:Config}${13: #($14)} ${15:cfg};
 
-	${16:InAgt}${17: #($18)} i_agt;
-	${19:OutAgt}${20: #($21)} o_agt;
+	${16:InAgt}${17: #($18)} iagt;
+	${19:OutAgt}${20: #($21)} oagt;
 	${22:Cov}${23: #($24)} cov;
 	${25:Mdl}${26: #($27)} mdl;
 	${28:Scb}${29: #($30)} scb;
@@ -59,16 +59,16 @@ class ${1:Environment}${2: #(
 		cov_en = $15.cov_en;
 		ref_latency = $15.ref_latency;
 
-		i_agt = $16$17::type_id::create("i_agt", this);
-		uvm_config_db #($12$13)::set(this, "i_agt", "$15", $15);
+		iagt = $16$17::type_id::create("iagt", this);
+		uvm_config_db #($12$13)::set(this, "iagt", "$15", $15);
 
 		if (cov_en) begin
 			cov = $22$23::type_id::create("cov", this);
 			cov_sti_fifo = new("cov_sti_fifo", this);
 		end
 
-		o_agt = $19$20::type_id::create("o_agt", this);
-		uvm_config_db #($12$13)::set(this, "o_agt", "$15", $15);
+		oagt = $19$20::type_id::create("oagt", this);
+		uvm_config_db #($12$13)::set(this, "oagt", "$15", $15);
 
 		if (!scb_en) begin
 			return;
@@ -93,7 +93,7 @@ class ${1:Environment}${2: #(
 		super.connect_phase(phase);
 
 		if (cov_en) begin
-			i_agt.ap.connect(cov_sti_fifo.analysis_export);
+			iagt.ap.connect(cov_sti_fifo.analysis_export);
 			cov.imon_getp.connect(cov_sti_fifo.blocking_get_export);
 		end
 
@@ -101,18 +101,18 @@ class ${1:Environment}${2: #(
 			return;
 		end
 
-		i_agt.ap.connect(mdl_sti_fifo.analysis_export);
+		iagt.ap.connect(mdl_sti_fifo.analysis_export);
 		mdl.imon_getp.connect(mdl_sti_fifo.blocking_get_export);
 
-		i_agt.ap.connect(scb_sti_fifo.analysis_export);
+		iagt.ap.connect(scb_sti_fifo.analysis_export);
 		scb.imon_getp.connect(scb_sti_fifo.nonblocking_get_export);
 
 		if (fault_inject_en) begin
-			o_agt.ap.connect(fi.imp);
+			oagt.ap.connect(fi.imp);
 			fi.ap.connect(scb_obs_fifo.analysis_export);
 		end
 		else begin
-			o_agt.ap.connect(scb_obs_fifo.analysis_export);
+			oagt.ap.connect(scb_obs_fifo.analysis_export);
 		end
 		scb.omon_getp.connect(scb_obs_fifo.blocking_get_export);
 
@@ -159,8 +159,8 @@ class ${1:Environment}${2: #(
 	function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
 
-		$21.sqr0 = $13.i_agt.sqr;
-		$21.sqr1 = $17.i_agt.sqr;
+		$21.sqr0 = $13.iagt.sqr;
+		$21.sqr1 = $17.iagt.sqr;
 	endfunction
 endclass
 endsnippet

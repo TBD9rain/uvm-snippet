@@ -104,8 +104,8 @@ class {{ENVIRONMENT}}{{PARAMS_2}} extends uvm_env;
     function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
 
-        {{VSQR_21}}.sqr0 = {{ENV0_13}}.i_agt.sqr;
-        {{VSQR_21}}.sqr1 = {{ENV1_17}}.i_agt.sqr;
+        {{VSQR_21}}.sqr0 = {{ENV0_13}}.iagt.sqr;
+        {{VSQR_21}}.sqr1 = {{ENV1_17}}.iagt.sqr;
     endfunction
 endclass
 ```
